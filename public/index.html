@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EVE GARDEN AI — AI Agents That Work For You</title>
+<link rel="stylesheet" href="/style.css?v=6">
+</head><body>
+
+<!-- ============ LANDING ============ -->
+<div id="landing">
+  <nav><div class="logo"><svg width="26" height="26" viewBox="0 0 40 40"><g fill="none" stroke="#3B82F6" stroke-width="2"><path d="M20 20 L20 6 M20 20 L32 27 M20 20 L8 27 M20 20 L32 13 M20 20 L8 13 M20 20 L20 34 M20 20 L34 20 M20 20 L6 20"/></g><g fill="#F1F3F5"><circle cx="20" cy="6" r="2.4"/><circle cx="32" cy="27" r="2.4"/><circle cx="8" cy="27" r="2.4"/><circle cx="32" cy="13" r="2.4"/><circle cx="8" cy="13" r="2.4"/><circle cx="20" cy="34" r="2.4"/><circle cx="34" cy="20" r="2.4"/><circle cx="6" cy="20" r="2.4"/></g><g fill="none" stroke="#F1F3F5" stroke-width="2.5"><path d="M20 12 a5 5 0 1 0 5 5 v-1 a5 5 0 1 1 5 5 a5 5 0 0 1 -5 5 a5 5 0 0 1 -5 -5 a5 5 0 0 1 -5 -5 a5 5 0 0 1 5 -5" opacity="0.9"/></g><circle cx="20" cy="20" r="3" fill="#3B82F6"/></svg><span>EVE GARDEN <b>AI</b></span></div>
+    <div class="navlinks"><a href="#agents-preview">Agents</a><a href="#market">Marketplace</a><a href="#" onclick="showAuth('login');return false">Sign in</a></div>
+    <button class="btn primary" onclick="showAuth('signup')">Create Your First Agent</button>
+  </nav>
+  <section class="hero">
+    <h1>AI Agents That <span class="grad">Work For You</span></h1>
+    <p class="sub">Create intelligent AI agents with memory, tools, browsers, terminals, file systems, and autonomous workflows.</p>
+    <div class="cta"><button class="btn primary big" onclick="showAuth('signup')">Create Your First Agent</button><a class="btn ghost big" href="#market">Browse Marketplace</a></div>
+    <div class="float-grid" id="orbitCards"></div>
+    <div class="feats"><div class="feat"><h4>🧠 Memory</h4><p>Every agent remembers your goals, chats and preferences.</p></div><div class="feat"><h4>🌐 Real Browser</h4><p>Agents open, read and analyze live websites.</p></div><div class="feat"><h4>⌨️ Terminal</h4><p>Linux shell with node, python, git and npm.</p></div><div class="feat"><h4>📁 File Manager</h4><p>Projects, uploads, downloads and knowledge.</p></div><div class="feat"><h4>🛠️ Code Editor</h4><p>VS Code style editor with live preview.</p></div><div class="feat"><h4>📚 Knowledge Base</h4><p>Upload PDFs and docs agents can search.</p></div></div>
+  </section>
+  <section id="market" class="market-section"><h2>Agent Marketplace</h2><p class="sub">Ready-made specialists, one click away.</p><div id="marketGrid" class="grid"></div></section>
+  <footer>EVE GARDEN AI © 2026 · Agents that live in the cloud</footer>
+</div>
+
+<!-- ============ AUTH ============ -->
+<div id="auth" class="hidden"><div class="auth-card">
+  <div class="logo big"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="#3B82F6" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="#3B82F6"/></svg><span>EVE GARDEN <b>AI</b></span></div>
+  <h2 id="authTitle">Welcome back</h2>
+  <form id="authForm" onsubmit="return false">
+    <input id="fName" class="in" placeholder="Full name" autocomplete="name" style="display:none">
+    <input id="fEmail" class="in" type="email" placeholder="Email" autocomplete="email" required>
+    <input id="fPass" class="in" type="password" placeholder="Password" autocomplete="current-password" required>
+    <div id="authMsg" class="msg hidden"></div>
+    <button id="authBtn" class="btn primary wide" onclick="doAuth()">Sign in</button>
+    <div class="alt" id="authAlt">New here? <a onclick="showAuth('signup')">Create account</a> · <a onclick="showAuth('forgot')">Forgot password</a></div>
+  </form>
+  <div id="verifyBox" class="hidden"><p class="msg ok">✓ Account created. Verify your email to finish:</p><button class="btn primary wide" id="verifyBtn">Verify Email</button></div>
+</div></div>
+
+<!-- ============ APP ============ -->
+<div id="app" class="hidden">
+<aside class="side"><div class="logo"><svg width="22" height="22" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="#3B82F6" stroke-width="2.5"/><circle cx="20" cy="20" r="6" fill="#3B82F6"/></svg><span>EVE GARDEN</span></div>
+  <nav>
+    <a class="on" data-v="home" onclick="go('home')">⌂ Home</a>
+    <a data-v="agents" onclick="go('agents')">◉ Agents</a>
+    <a data-v="chats" onclick="go('chats')">💬 Chats</a>
+    <a data-v="files" onclick="go('files')">📁 Files</a>
+    <a data-v="projects" onclick="go('projects')">⌸ Projects</a>
+    <a data-v="kb" onclick="go('kb')">📚 Knowledge Base</a>
+    <a data-v="workflows" onclick="go('workflows')">Workflow Builder</a>
+    <a data-v="market2" onclick="go('market2')">🛒 Marketplace</a>
+    <a data-v="api" onclick="go('api')">⚡ API</a>
+    <a data-v="settings" onclick="go('settings')">⚙ Settings</a>
+  </nav>
+  <div class="side-foot"><span id="uName"></span><a onclick="logout()">Sign out</a></div>
+</aside>
+<main id="main"></main>
+</div>
+
+<script src="/app.js?v=7"></script>
+</body></html>

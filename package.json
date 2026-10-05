@@ -1,0 +1,13 @@
+{
+  "name": "eve-garden-ai",
+  "version": "1.0.0",
+  "description": "EVE GARDEN AI - AI Operating System",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "bcryptjs": "^2.4.3",
+    "multer": "^1.4.5-lts.1"
+  },
+  "engines": { "node": ">=18" }
+}
